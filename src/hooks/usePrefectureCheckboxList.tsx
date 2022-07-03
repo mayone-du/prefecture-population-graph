@@ -2,6 +2,9 @@ import type { ChangeEvent } from "react";
 import { useCallback, useState } from "react";
 import type { PrefData } from "src/types/resas";
 
+/**
+ * 都道府県のチェックボックスのリストのJSXと、チェック済みの都道府県コードのリストを返すhook
+ * */
 export const usePrefectureCheckboxList = (prefData: PrefData) => {
   const [checkedPrefCodes, setCheckedPrefCodes] = useState<number[]>([]);
   const handleChangeCheck = useCallback(
