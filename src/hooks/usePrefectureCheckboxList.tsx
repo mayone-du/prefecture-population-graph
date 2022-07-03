@@ -1,6 +1,6 @@
 import type { ChangeEvent } from "react";
 import { useCallback, useState } from "react";
-import type { PrefData } from "src/types";
+import type { PrefData } from "src/types/resas";
 
 export const usePrefectureCheckboxList = (prefData: PrefData) => {
   const [checkedPrefCodes, setCheckedPrefCodes] = useState<number[]>([]);

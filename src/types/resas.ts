@@ -1,5 +1,7 @@
 type ResasResponse<T> = {
+  statusCode?: string | null;
   message: string | null;
+  description?: string | null;
   result: T;
 };
 
@@ -18,3 +20,9 @@ export type PopulationAPI = ResasResponse<{
     }[];
   }[];
 }>;
+
+/**
+ * 扱いやすくするための整形後の型
+ */
+export type PrefData = Record<number, string>;
+export type PopulationData = Record<number, PopulationAPI>;
